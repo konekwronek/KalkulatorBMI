@@ -7,24 +7,23 @@ using namespace std;
 
 int main()
 {
-    char wybor = 't';
-    do {
-        cout << "Podaj wzrost w cm\n";
-        double wzrost; //wzrost w cm
-        cin >> wzrost;
-        cout << "Podaj mase ciala w kg\n";
-        double masa; //masa w kg
-        cin >> masa;
+    char choice = 'y'; //Again?
+    while (choice == 'y' || choice == 'Y') {
+        cout << "Enter hight in cm\n";
+        double hight; //hight in cm
+        cin >> hight;
+        cout << "Enter weight in kg\n";
+        double weight; //masa w kg
+        cin >> weight;
 
-        wzrost = wzrost / 100; //wzrost w metrach
+        hight = hight / 100; //hight in meters
         double bmi; //bmi
-        bmi = masa / (wzrost * wzrost); //obliczenie bmi
-        cout << "Twoje BMI to: " << bmi << endl;
+        bmi = weight / (hight * hight); //bmi counting
+        cout << "Your BMI is: " << bmi << endl;
 
-        cout << "Jeszcze raz? [t/n]\n";
-        cin >> wybor;
-    } while (wybor == 't' || wybor == 'T');
+        cout << "Again? [y/n]\n";
+        cin >> choice;
+    };
 
-    system("pause");
     return 0;
 }
