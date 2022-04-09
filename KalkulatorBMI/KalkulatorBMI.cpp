@@ -13,7 +13,7 @@ int main()
         double hight; //hight in cm
         cin >> hight;
         cout << "Enter weight in kg\n";
-        double weight; //masa w kg
+        double weight; //weight in kg
         cin >> weight;
 
         hight = hight / 100; //hight in meters
